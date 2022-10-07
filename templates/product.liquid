@@ -1,0 +1,11 @@
+{%assign product_id = '' %}
+{%assign product_type= '' %}
+{% section 'product-template' %}
+{%- include 'size-chart'-%}
+{%- section 'product-recommendations' -%}
+{%- if product.metafields.product_pair.pair != blank -%}
+	{% section 'pair-products' %}
+{%- endif -%}
+{%- section 'recently-viewed-products' -%}
+{%- include 'product-review' -%}
+{%- include 'similar-collection-products' -%}
