@@ -54,7 +54,7 @@
                   </div>
                 {%- else -%}
                   {% assign icon_url = link.url | split: "/" %}                	
-                  <a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary u-h6">{% if link.url contains 'sale' or link.url contains 'customer-reviews' or link.url contains 'new' %}{% else %}<img class="image-icon" src ="{{ icon_url.last | append: '-icon.png' | asset_url }}">{% endif %}{{ link.title | escape }}</a>
+                  <a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary u-h6">{% if link.url contains 'sale' or link.url contains 'customer-reviews' or link.url contains 'new' %}{% else %}<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="image-icon lazy2"  data-src ="{{ icon_url.last | append: '-icon.png' | asset_url }}">{% endif %}{{ link.title | escape }}</a>
                 {%- endif -%}
               </div>
             {%- endfor -%}
